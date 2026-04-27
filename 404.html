@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Opening Merge...</title>
+</head>
+<body>
+  <p>Opening Merge app...</p>
+  <script>
+    // GitHub Pages serves this for any unknown path
+    // Extract the room code from the URL and redirect to the deep link
+    const path = window.location.pathname;
+    const match = path.match(/\/room\/([A-Za-z0-9]+)/);
+    if (match) {
+      window.location = 'merge://room/' + match[1];
+    }
+  </script>
+</body>
+</html>
