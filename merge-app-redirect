@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Opening Merge...</title>
+</head>
+<body>
+  <script>
+    const path = window.location.pathname;
+    const parts = path.split('/');
+    const roomCode = parts[parts.length - 1];
+    window.location = 'merge://room/' + roomCode;
+  </script>
+  <p>Opening Merge app... if nothing happens, make sure Merge is installed.</p>
+</body>
+</html>
